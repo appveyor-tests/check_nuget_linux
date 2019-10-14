@@ -1,3 +1,5 @@
+image: ubuntu
+
 init:
   - appveyor version
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
