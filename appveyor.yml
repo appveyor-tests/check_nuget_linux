@@ -11,11 +11,11 @@ test_script:
   - sh: |
     mkdir -p ~/.nuget/NuGet
     echo '<?xml version="1.0" encoding="utf-8"?>
-        <configuration>
-          <packageSources>
-            <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-          </packageSources>
-        </configuration>' > ~/.nuget/NuGet/NuGet.Config
+    <configuration>
+    <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+    </packageSources>
+    </configuration>' > ~/.nuget/NuGet/NuGet.Config
   - dotnet tool install -g Cake.Tool
 
 build: off
