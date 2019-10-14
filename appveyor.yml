@@ -1,12 +1,9 @@
-
-
 init:
   - appveyor version
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
-  
-  
-  test_script:
+
+test_script:
   - dotnet tool install -g Cake.Tool
 
 build: off
