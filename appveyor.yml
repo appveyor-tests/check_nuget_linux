@@ -7,7 +7,7 @@ init:
 
 test_script:
   - cat ~/.config/NuGet/NuGet.Config
-  - dotnet tool install -g Cake.Tool
+  - dotnet tool install --verbosity normal -g Cake.Tool
   - ls -ltra ~/.dotnet/tools/
   - sh: |
       mkdir -p ~/.nuget/NuGet
@@ -17,7 +17,7 @@ test_script:
       <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
       </packageSources>
       </configuration>' > ~/.nuget/NuGet/NuGet.Config
-  - dotnet tool install -g Cake.Tool
+  - dotnet tool install --verbosity normal -g Cake.Tool
   - ls -ltra ~/.dotnet/tools/
   
 build: off
