@@ -7,7 +7,11 @@ init:
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
 test_script:
-  - cat ~/.config/NuGet/NuGet.Config
+  - sh: |
+        cat ~/.config/NuGet/NuGet.Config
+        echo
+        echo
+  - sh: dotnet tool list -g
   - sh: |
         if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
           dotnet tool install -g Cake.Tool
@@ -21,6 +25,7 @@ test_script:
       <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
       </packageSources>
       </configuration>' > ~/.nuget/NuGet/NuGet.Config
+  - sh: dotnet tool list -g
   - sh: |
         if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
           dotnet tool install -g Cake.Tool
