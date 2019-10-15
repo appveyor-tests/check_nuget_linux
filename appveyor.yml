@@ -9,9 +9,9 @@ init:
 test_script:
   - cat ~/.config/NuGet/NuGet.Config
   - sh: |
-      if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
-        dotnet tool install -g Cake.Tool
-      fi
+        if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
+          dotnet tool install -g Cake.Tool
+        fi
   - ls -ltra ~/.dotnet/tools/
   - sh: |
       mkdir -p ~/.nuget/NuGet
@@ -22,9 +22,9 @@ test_script:
       </packageSources>
       </configuration>' > ~/.nuget/NuGet/NuGet.Config
   - sh: |
-      if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
-        dotnet tool install -g Cake.Tool
-      fi
+        if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
+          dotnet tool install -g Cake.Tool
+        fi
   - ls -ltra ~/.dotnet/tools/
   
 build: off
