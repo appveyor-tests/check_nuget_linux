@@ -8,6 +8,7 @@ init:
 
 test_script:
   - sh: |
+        cat ~/.nuget/NuGet/NuGet.Config
         cat ~/.config/NuGet/NuGet.Config
         echo
         echo
