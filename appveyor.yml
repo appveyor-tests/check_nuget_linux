@@ -6,10 +6,11 @@ init:
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
-#nuget:
-#  account_feed: true
+nuget:
+  account_feed: true
 
 test_script:
+  - ls ~/.nuget
   - sh: |
         cat ~/.nuget/NuGet/NuGet.Config
         cat ~/.config/NuGet/NuGet.Config
