@@ -10,6 +10,7 @@ nuget:
   account_feed: true
 
 test_script:
+  - cp ~/.config/NuGet/NuGet.Config ~/.nuget/NuGet
   - ls ~/.nuget
   - sh: |
         cat ~/.nuget/NuGet/NuGet.Config
