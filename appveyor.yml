@@ -6,6 +6,9 @@ init:
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
+nuget:
+  account_feed: true
+
 test_script:
   - sh: |
         cat ~/.nuget/NuGet/NuGet.Config
