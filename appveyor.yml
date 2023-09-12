@@ -6,8 +6,8 @@ init:
   - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
   - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
-nuget:
-  account_feed: true
+#nuget:
+#  account_feed: true
 
 test_script:
   - sh: |
