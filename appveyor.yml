@@ -12,8 +12,9 @@ nuget:
 test_script:
   - cat ~/.nuget/NuGet/NuGet.Config
   - cat ~/.config/NuGet/NuGet.Config
-  - cp ~/.nuget/NuGet/NuGet.Config ~/.config/NuGet
-  - ls ~/.nuget
+  #- cp ~/.nuget/NuGet/NuGet.Config ~/.config/NuGet
+  #- ls ~/.nuget
+  - dotnet new webapp
   - sh: dotnet tool list -g
   - sh: |
         if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
