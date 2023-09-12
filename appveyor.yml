@@ -12,7 +12,7 @@ nuget:
 test_script:
   - cat ~/.nuget/NuGet/NuGet.Config
   - cat ~/.config/NuGet/NuGet.Config
-  - cp ~/.config/NuGet/NuGet.Config ~/.nuget/NuGet
+  - cp ~/.nuget/NuGet/NuGet.Config ~/.config/NuGet
   - ls ~/.nuget
   - sh: dotnet tool list -g
   - sh: |
