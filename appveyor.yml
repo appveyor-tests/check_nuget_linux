@@ -19,7 +19,7 @@ test_script:
   - sh: dotnet tool list -g
   - sh: |
         if [[ $(dotnet tool list -g) != *"cake.tool"* ]]; then
-          dotnet tool install -g Cake.Tool
+          dotnet tool install -g Cake.Tool --version 3.1.0
         fi
   - ls -ltra ~/.dotnet/tools/
   - sh: |
